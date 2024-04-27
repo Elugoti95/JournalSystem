@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+    <link
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png" />
+    <style>
+      @font-face {
+        font-family: "SGProLight";
+        src: url("assets/fonts/SF-Pro-Display-Light.otf") format("opentype");
+        /* Path to your font file */
+      }
+
+      @font-face {
+        font-family: "SGProRegular";
+        src: url("assets/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+      }
+
+      @font-face {
+        font-family: "SGProBold";
+        src: url("assets/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+      }
+
+      body {
+        font-family: "SGProLight", sans-serif;
+      }
+
+      h2 {
+        font-family: "SGProBold";
+      }
+
+      #registerDiv {
+        width: 400px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      .card-img-top {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+      #go_to_login{
+        text-decoration: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="registerDiv" class="card text-dark bg-opacity-10 bg-dark">
+        <img class="card-img-top" src="assets/logo.png" alt="logo.png" />
+        <div class="card-body">
+          <div>
+            <h2 class="card-title text-success text-center">Online Journal Registration</h2>
+            <div class="card-text" id="reg_message" role="alert"></div>
+            <form role="form" id="registerForm">
+              <input type="hidden" id="loginForm" />
+              <input type="hidden" id="go_to_register" />
+              <div class="mb-3">
+                <label class="form-label" for="username">Username:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Email:</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="password">Password:</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="phone">Phone:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+              <button class="form-control mb-2 btn btn-success" type="submit">Register</button>
+              <a class="form-control text-center" href="http://localhost/journal/login.html" id="go_to_login">I have an account</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
